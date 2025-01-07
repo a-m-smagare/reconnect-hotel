@@ -1,0 +1,375 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: #48461e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    background-image: url('assets/home-background.jpg') no-repeat;
+}
+
+#booking-page {
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Header styling */
+.header {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 1%;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards; 
+    animation-delay: 0.5s;
+    z-index: 10; 
+}
+
+.navigation ul {
+    display: flex;
+    flex-direction: row;
+    gap: 50%;
+    top: 6%;
+    left: 75%;
+    align-items: center;
+    position: absolute;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards; 
+    animation-delay: 0.5s;
+    list-style-type: none;
+    font-family: 'Ibarra Real Nova', serif;
+    font-weight: bold;
+    text-transform: none;
+    font-size: 1.1rem;
+    z-index: 10; 
+}
+
+.navigation ul a {
+    text-decoration: none;
+    color: #aa9882;
+    transition: color 0.5s ease;
+}
+
+.navigation ul a:hover {
+    color: #ffffff;
+}
+
+.logo-home img {
+    width: 100px;
+    height: auto;
+    margin-right: 10px;
+    z-index: 10; 
+}
+
+h1 {
+    font-size: 2.2rem;
+    font-family: 'Ibarra Real Nova', serif;
+    text-transform: none;
+    font-weight: bold;
+    color: #aa9882;
+    z-index: 10; 
+}
+
+.logo-home img,
+h1 {
+    padding-top: 2%;
+}
+
+
+.booking-background {
+    width: 100vw;     
+    height: 71%;    
+    position: relative; 
+    overflow: hidden; 
+    margin-top: 7%;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards; 
+    animation-delay: 0.3s;
+}
+
+.booking-background img {
+    position: absolute;  
+    top: 50%;           
+    left: 50%;        
+    transform: translate(-50%, -50%); 
+    width: 100%;      
+    height: auto;       
+    object-fit: cover; 
+    filter: brightness(0.6) contrast(1.2) saturate(1.1);
+}
+
+/* Booking form */
+.booking-container {
+    background-color: #aa9882;
+    padding: 1% 2%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 19%;
+    text-align: center;
+    opacity: 0;
+    animation: fadeInUp 0.4s ease-out forwards;
+    animation-delay: 1s; 
+    position: absolute;
+    top: 33%;
+    left: 39%;
+}
+
+#booking-form label {
+    display: block;
+    margin: 5% 0 3%;
+    font-size: 0.9rem;
+    color: #48461e;
+}
+
+#booking-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#booking-form .form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 5%;
+}
+
+#booking-form .form-group {
+    flex: 1; 
+}
+
+#booking-form .form-group input {
+    width: 100%; 
+}
+
+/* Button styling */
+#booking-form button {
+    padding: 4% 8%;
+    background-color: #48461e;
+    color: #aa9882;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+#booking-form button:hover {
+    background-color: #ffffff;
+}
+
+#about-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+    padding: 7%;
+}
+
+.popup-content {
+    background-color:#aa9882;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    padding: 1%;
+    max-width: 800px;
+    margin: auto;
+}
+
+.popup-content > img {
+    max-width: 300px;
+    height: auto;
+    object-fit: cover;
+    margin-right: 1%;
+}
+
+.popup-text {
+    max-width: 450px;
+    color: #333;
+}
+
+.popup-text h2 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    font-family: "Ibarra Real Nova", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.popup-text h3 {
+    font-size: 1.06rem;
+    color: #ffffff;
+    font-family: "Roboto Condensed", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    margin-bottom: 2%;
+}
+
+.popup-text p {
+    font-size: 0.9rem;
+    color: #ffffff;
+    font-family: "Roboto Condensed", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    margin-bottom: 10px;
+}
+
+.popup-text ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 15px;
+    color: #ffffff;
+    font-family: "Roboto Condensed", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.popup-text ul li {
+    margin-bottom: 8px;
+}
+
+#closeBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+#closeBtn:hover {
+    color:#aa9882;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Start slightly below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End at the normal position */
+    }
+}
+
+/* Media Query for Tablets */
+@media (max-width: 1024px) {
+    .logo-home img {
+        width: 100px;
+        height: 100px;
+        padding-bottom: 0;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .header {
+        top: 0%;
+        display: flex;
+        flex-direction: column;
+        left: 40%;
+    }
+
+    .navigation {
+        position: absolute;
+        top: 91%;
+        left: 36%;
+    }
+
+    .booking-background {    
+        height: 400px;  
+        top: 14%  
+    }
+
+    .booking-container {
+        width: 420px;
+        left: 30%;
+        top: 35%;
+    }
+
+    #about-popup {
+        width: 100vw;
+        height: 100vh;
+    }
+    
+    .popup-content {
+        flex-direction: row;
+    }
+
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+    /* Logo */
+    .logo-home img {
+        height: auto;
+    }
+
+    /* Heading */
+    h1 {
+        font-size: 1.7rem;
+        padding-top: 0;
+    }
+
+    .header {
+        top: 1%;
+        display: flex;
+        flex-direction: column;
+        left: 25%;
+    }
+
+    /* Nav bar */
+    .navigation {
+        position: absolute;
+        top: 90%;
+        left: 10%;
+    }
+
+    /* Background image */
+    .booking-background {    
+        height: 71%;    
+    }
+
+    /* Booking form */
+    .booking-container {
+        width: 73%;
+        left: 14%;
+        padding: 4% 5% 4%;
+    }
+
+    #about-popup {
+        width: 100vw;
+        height: 100vh;
+    }
+    
+    .popup-content {
+        flex-direction: column;
+        max-width: 300px;
+    }
+    
+    .popup-content > img {
+        display: none;
+    }
+}

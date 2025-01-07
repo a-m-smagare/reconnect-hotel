@@ -1,0 +1,1202 @@
+.logo-home img,
+.logo-contact img,
+.footer-column img {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: auto; 
+    width: auto; 
+    max-height: 150px; 
+    max-width: 150px; 
+    position: relative; 
+    margin: 0; 
+    padding: 0;
+}
+
+body {
+    background-color: #48461e;
+}
+
+/* Home Section */
+#home {
+    position: relative;
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh; 
+    background-color: #48461e; 
+}
+
+/* Home background */
+.home-background img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.home-background {
+    position: absolute; 
+    top: 0;
+    right: 0;
+    width: 40%; 
+    height: 100%; 
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* Menu */
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* Nagivation bar */
+.navigation ul {
+    display: flex;
+    gap: 14.5%; 
+    list-style: none;
+    font-size: 1.1rem;
+}
+
+.navigation li {
+    font-family: "Ibarra Real Nova", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    padding: 0 22%;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #c2b59b;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+    color: #ffffff;
+}
+
+/* Book Now button */
+.book-now {
+    margin-left: auto; 
+    margin-right: 2%;
+    display: flex;
+    align-items: center; 
+    opacity: 0;
+    animation: fadeInUp 0.4s ease-out forwards;
+    animation-delay: 1s; 
+}
+
+.book-now button {
+    padding: 5% 50px;
+    font-size: 1.1rem;
+    background-color: #c2b59b;
+    color: #000000;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    font-family: "Signika", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+      "GRAD" 0;
+    text-transform: uppercase;
+}
+
+.book-now button:hover {
+    background-color: #ffffff
+}
+
+/* Heading Homepage & text */
+#home h1,
+#home p {
+    z-index: 2;
+    color: #aa9882;
+    position: absolute;
+    opacity: 0;
+    animation: fadeInUp 0.4s ease-out forwards;
+    animation-delay: 0.5s; 
+}
+
+#home h1 {
+    font-size: 3.6rem;
+    top: 33%;
+    font-family: "Ibarra Real Nova", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    padding-left: 1%;
+}
+
+#home p {
+    top: 50%;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding-left: 1.5%;
+    font-family: "Roboto Condensed", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* Check-availablity bar */
+#availability {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    font-size: 1.1rem;
+    justify-content: space-evenly;
+    background-color: #aa9882;
+    padding: 1% 1.5%;
+    border: 2px solid #aa9882;
+    border-radius: 15px;
+    max-width: 1200px;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2; 
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+
+.form-group label {
+    margin-bottom: 10%;
+    font-family: "Signika", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+      "GRAD" 0;
+    text-transform: uppercase;
+}
+
+input[type="date"],
+input[type="number"] {
+    border: none;
+    border-bottom: 2px solid black;
+    background-color: transparent;
+    padding: 2%;
+    font-size: 1.3rem;
+    font-family: "Ibarra Real Nova", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+input[type="date"]:hover,
+input[type="number"]:hover {
+    background-color: #ffffff;
+    transition: background-color 0.3s ease;
+    border-color: 2px solid black;
+    border-radius: 5px;
+}
+
+input[type="number"] {
+    border-radius: 20px;
+    border: none;
+    padding-left: 10%;
+    font-size: 1.25rem;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#availability button[type="submit"] {
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    font-size: 1.06rem;
+    background-color: #48461e;
+    color: #aa9882;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    height: 3.75rem;
+    margin: auto 0;
+
+    font-family: "Signika", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+      "GRAD" 0;
+    text-transform: uppercase;
+}
+
+#availability button:hover {
+    background-color: #ffffff;
+}
+
+/* About Section*/
+#about {
+    background-color: #ffffff;
+    background-image: url('assets/about-background.jpg') no-repeat;
+    position: relative;
+    height: 100vh;
+}
+
+.about-background,
+.about-background img {
+    /* height: 450px; */
+    height: 80%;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    object-fit: cover;
+    filter: brightness(70%);
+}
+
+.about-background {
+    width: 100%;
+}
+
+.about-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+    top: 15%;
+    width: 100%;
+}
+
+.about-info > .book-now {
+    margin: 0 auto;
+    margin-top: 2%;
+    height: 100px;
+}
+
+.about-info > p {
+    text-align: center;
+    height: 100px;
+    width: 48%;
+}
+
+.about-info h1 {
+    margin: 0 auto;
+}
+
+.about-info h1, 
+.about-info h3 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "Roboto Condensed", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    color: #c2b59b;
+}
+
+.about-info h2 {
+    font-size: 4.3rem;
+    font-family: "Ibarra Real Nova", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #c2b59b;
+    margin: 2% auto;
+}
+
+.about-info h3 {
+    margin: 0 auto; 
+} 
+
+#about-p {
+    font-size: 1.5rem;
+    margin-top: 4%;
+    font-family: "Ibarra Real Nova", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #c2b59b;
+    text-align: center;
+}
+
+/* Gallery section */
+#gallery {
+    background-color: #c2b59b;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+#gallery > h1 {
+    font-size: 2.8rem;
+    font-family: "Ibarra Real Nova", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: black;
+    margin: 0;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    top: 8%
+}
+
+#gallery > h2 {
+    font-size: 1.5rem;
+    font-family: "Roboto Condensed", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: rgb(94, 93, 93);
+    margin: 0;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    top: 9%;
+    text-transform: uppercase;
+}
+
+.image img {
+    height: 400px;
+    width: 350px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+ }
+
+.image img:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+    margin-bottom: 10%;
+}
+
+.image {
+    height: 93vh;
+    width: 350px;
+    justify-content: center; 
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    animation: slideUp 1s ease-out forwards;
+    animation-delay: 0.3;
+
+    transform: translateY(-100px); 
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+.image.visible {
+    opacity: 1;
+    transform: translateY(0); 
+}
+
+.description {
+    display: none;
+    position: absolute;
+    bottom: 5%;
+    padding: 0 2%;
+    margin: 0;
+    background-color: white;
+    color: #000;
+    text-align: center;
+    font-family: "Roboto Condensed", serif;
+    font-weight: 300;
+    font-size: 0.85rem;
+}
+
+.image:hover .description {
+    display: block;
+}
+
+.image:hover .label {
+    display: none;
+}
+
+.label {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "Roboto Condensed", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    color: #000000
+} 
+
+.images {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 0.8%;
+    position: relative;
+    z-index: 1;
+}
+
+.image:hover {
+    transform: scale(1.05);
+    z-index: 3;
+    opacity: 1; 
+}
+
+.image:not(:hover) {
+    opacity: 0.8; 
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Contact us Section */
+#contact {
+    background-image: url('assets/contact-background.jpg') no-repeat;
+    position: relative;
+}
+
+.contact-background,
+.contact-background img {
+    height: 100vh;
+    width: 63%;
+    position: relative;
+    z-index: 1;
+    top: 0%;
+    display: inline-block;
+}
+
+.logo-contact img {
+    position: absolute;
+    z-index: 2;
+}
+
+.contact-page {
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    position: absolute;
+    left: 45%;
+    top: 3%;
+}
+
+.contact-page h1 {
+    font-size: 3.4rem;
+    font-family: "Ibarra Real Nova", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #c2b59b;
+    margin: 2.5% 0;
+}
+
+.contact-page p {
+    font-family: "Ibarra Real Nova", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #c2b59b;
+    font-size: 1.25rem;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px; 
+    margin-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-color: #c2b59b;
+    border-radius: 15px;
+}
+
+#contact-form label {
+    font-size: 1.1rem;
+    margin-bottom: 2%;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.name-fields {
+    display: flex;
+    gap: 3.5%; 
+    width: 100%;
+}
+
+.name-fields .field {
+    display: flex;
+    flex-direction: column; 
+    width: 48%; 
+}
+
+#contact-form input, #contact-form textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-bottom: 2px solid #000000;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box; 
+    max-width: 100%;
+    background-color: transparent;
+
+}
+
+#contact-form button {
+    padding: 1.7% 3%;
+    max-width: 25%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    margin-left: 200px;
+    margin-left: 75%;
+    background-color: #48461e; 
+    color: #c2b59b;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-family: "Signika", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+      "GRAD" 0;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact-form button:hover {
+    background-color: #ffffff;
+}
+
+#contact-form > label,
+.field > label {
+    font-size: 1.1rem;
+    font-family: "Signika", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+      "GRAD" 0;
+    text-transform: uppercase;
+}
+
+/* Footer */
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+    background-color: #000000;
+    align-items: center;
+    color: #c5c0c0;
+}
+
+.footer-column:nth-child(1) {
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.hotel-name {
+    font-family: "Ibarra Real Nova", serif;
+    color: #aa9882;
+    padding-left: 2%;
+}
+
+.hotel-description {
+    font-family: "Roboto Condensed", serif;
+    font-size: 1rem;
+    padding-left: 2%;
+    color: #aa9882;
+}
+
+.hotel-name-description {
+    width: 25rem;
+}
+
+.footer-column {
+    flex: 1;
+}
+
+.footer-column:nth-child(3) {
+    margin-bottom: 2.7rem;
+}
+
+.footer-column > h3 {
+    font-family: "Ibarra Real Nova", serif;
+    color: #aa9882;
+    font-size: 1.1rem;
+}
+
+.service-links {
+    list-style: none;
+    padding: 0;
+    padding-bottom: 2%;
+    font-family: "Roboto Condensed", serif;
+}
+
+.service-links a {
+    text-decoration: none; 
+    color: #aa9882; 
+    font-size: 0.9rem; 
+    transition: color 0.3s ease; 
+}
+
+.service-links a:hover,
+.email a:hover,
+.location a:hover {
+    color: #48461e; 
+}
+
+.email a,
+.location a {
+    text-decoration: none;
+    color: #aa9882;
+    font-family: "Roboto Condensed", serif;
+    font-size: 0.9rem;
+    transition: color 0.3s ease; 
+}
+
+.phone > img,
+.email > img,
+.location > img {
+    height: 25px;
+    width: 25px;
+}
+
+.phone,
+.email,
+.location {
+    display: flex;
+    flex-direction: row;
+    gap: 3%;
+    align-items: center; 
+}
+
+.phone > span,
+.email > span,
+.location > span {
+    font-size: 0.9rem; 
+    font-family: "Roboto Condensed", serif;
+    color: #aa9882;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); 
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+
+
+/* Media Query */
+/* Breakpoints */
+@media (max-width: 1382px) {
+    #availability {
+        display: none;
+    }
+
+    .about-info {
+        top: 9%;
+        width: 100%;
+    }
+
+    #about-p {
+    font-size: 1.4rem;
+    margin-top: 4.5%;
+    }
+
+    .image img {
+        height: 350px;
+        width: 300px;
+        object-fit: cover;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .contact-page {
+        top: 4.5%;
+    }
+
+    .contact-page h1 {
+        font-size: 3rem;
+        margin: 0;
+    }
+    
+    .contact-page p {
+        font-size: 1.2rem;
+    }
+    
+    #contact-form {
+        margin-top: 0;
+    }
+    
+ 
+}
+
+
+/* Media Query for Tablets */
+@media (max-width: 1025px) {
+    /* Nagivation bar */
+    .navigation ul {
+        gap: 0; 
+        font-size: 1.1rem;
+    }
+
+    .navigation li { 
+        padding: 0 10%;
+    }
+
+    /* Book Now button */
+    .book-now {
+        margin-left: auto; 
+        margin-right: 3%;
+    }
+
+    /* p element */
+    #home p {
+        top: 49%;
+        font-size: 1.5rem;
+    }
+
+    /* Check Availability bar */
+    #availability {
+        display: none;
+    }
+
+    #home {
+        height: 100vh;
+    }
+
+    /* #about */
+    #about {
+        height: 100vh
+    }
+       
+    .about-info {
+        top: 12%;
+        width: 100%;
+    }
+    
+    .about-info > p {
+        text-align: center;
+        height: 100px;
+        width: 48%;
+    }
+    
+    .about-info h1, 
+    .about-info h3 {
+        font-size: 1.3rem;
+    }
+    
+    .about-info h2 {
+        font-size: 4rem;
+    }
+      
+    #about-p {
+        font-size: 1.2rem;
+        margin-top: 7.5%;
+    }
+
+    /* Gallery */
+    #gallery > h1 {
+        font-size: 3rem;
+        top: 6%;
+    }
+    
+    #gallery > h2 {
+        font-size: 1.3rem;
+        top: 7%;
+    }
+
+    .image img {
+        height: 290px;
+        width: 240px;
+     }
+    
+    .description {
+        bottom: 5%;
+        font-size: 0.85rem;
+    }
+    
+    .label {
+        font-size: 1rem;
+    } 
+
+    /* Contact us */
+    .contact-background,
+    .contact-background img {
+        object-fit: cover;
+    }
+
+    .logo-contact img,
+    .logo-home img {
+        height: 8rem;
+        width: 8rem;
+    }
+
+    .contact-page {
+        top: 2%;
+    }
+
+    .contact-page h1 {
+        font-size: 3rem;
+        margin-bottom: 0%;
+    }
+
+    .contact-page p {
+        font-size: 1.2rem;
+        margin-top: 2%;
+    }
+
+    #contact-form {
+    max-width: 470px; 
+    margin-top: 0%;
+    }
+
+    #contact-form button {
+        padding: 1.8% 3.5%;
+        max-width: 30%;
+        font-size: 1.1rem;
+    }
+
+    /* Footer */
+    .footer-column img {
+        height: 8rem;
+        width: 8rem;
+    }
+
+    .service-links {
+        padding-bottom: 11%;
+        padding-top: 2%;
+    }
+
+    .footer-column:nth-child(3) {
+        padding-right: 3%;
+    }
+
+    .phone > img,
+    .email > img,
+    .location > img {
+        height: 25px;
+        width: 25px;
+    }
+
+}
+
+@media (max-width: 873px) {
+    #contact-form {
+        max-width: 350px; 
+    }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+    .logo-home img {
+        height: 8rem;
+        width: 8rem;
+    }
+
+    #home nav {
+        display: none;
+    }
+
+    #home h1 {
+        font-size: 3.8rem;
+        top: 33%;
+    }
+
+    #home p {
+        top: 62%;
+        font-family: 1.8rem;
+    }
+
+    #about-p {
+        font-size: 1.1rem;
+        margin-top: 10%;
+    }
+
+    #gallery {
+        height: auto;
+    }
+
+    #gallery h1 {
+        margin-top: 5%;
+    }
+
+    #gallery h2 {
+        margin-top: 2%;
+    }
+
+    .images {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        gap: 0%;   
+    }
+    
+    .image img {
+        height: 400px;
+        width: 350px;
+    }
+    
+    .image {
+        height: 80vh;
+    }
+
+    #contact-form {
+        max-width: 400px; 
+        margin-top: 0%;
+    }
+    
+    #contact-form button {
+        padding: 2% 4%;
+        max-width: 40%;
+        font-size: 1.1rem;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .footer-column:nth-child(2),
+    .footer-column:nth-child(3) {
+        padding-left: 2%;
+    }
+
+    .phone,
+    .email,
+    .location {
+        gap: 5%;
+    }
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+    .logo-home img {
+        height: auto;
+    }
+
+    .home-background  {
+        width: 100%;
+        filter: brightness(35%);
+    }
+    #home nav {
+        display: none;
+    }
+
+    .book-now {
+        margin-right: 25%;
+        margin-top: 110%;
+        font-size: 1rem;
+    }
+
+    .header { 
+        flex-direction: column;
+    }
+
+    #home h1 {
+        font-size: 3.5rem;
+        top: 23%;
+    }
+
+    #home p {
+        top: 71%;
+        left: 22%;
+        font-size: 1.25rem;
+    }
+
+    .about-info {
+        top: 10%;
+    }
+    
+    .about-info > .book-now {
+        display: none;
+    }
+    
+    .about-info > p {
+        text-align: center;
+        height: auto;
+        width: 80%;
+    }
+
+    .about-info h1, 
+    .about-info h3 {
+        font-size: 1.2rem;
+    }
+    
+    .about-info h2 {
+        font-size: 3.9rem;
+        text-align: center;
+    }
+    
+    #about-p {
+        font-size: 1.1rem;
+        margin-top: 27%;
+    }
+
+    .about-background,
+    .about-background img {
+        height: 72%;
+    }
+
+    #gallery {
+        height: auto;
+    }
+
+    #gallery h1 {
+        margin-top: 10%;
+        font-size: 1.8rem;
+    }
+
+    #gallery h2 {
+        margin-top: 2%;
+        font-size: 1.2rem;
+    }
+
+    .images {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        gap: 0%;   
+    }
+    
+    .image img {
+        height: 300px;
+        width: 250px;
+    }
+    
+    .image {
+        height: 60vh;
+    }
+
+    .description {
+        bottom: 5%;
+        padding: 0 1%;
+        margin-top: 10%;
+        font-size: 0.8rem;
+    }
+
+    .contact-background img {
+        display: none;
+    }
+    
+    .logo-contact img {
+        display: none;
+    }
+    
+    .contact-page {
+        flex-direction: column;
+        z-index: 2;
+        position: absolute;
+        left: 0;
+        margin-top: 10%;
+    }
+    
+    .contact-page h1 {
+        font-size: 1.8rem;
+        margin: 3% 0;
+        text-align: center;
+    }
+    
+    .contact-page p {
+        font-size: 1rem;
+        width: 80%;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: justify;
+    }
+    
+    #contact-form {
+        width: 70%;
+        margin-top: 1.5rem;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    
+    #contact-form label {
+        font-size: 1rem;
+    }
+    
+    #contact-form button {
+        padding: 2% 10%;
+        max-width: 50%;
+        margin-top: 4%;
+        margin-bottom: 4%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1.1rem;
+    }
+    
+    #contact-form > label,
+    .field > label {
+        font-size: 1rem;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 2%;
+    }
+    
+    .footer-column:nth-child(1) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1%;
+    }
+
+    .hotel-name {
+        margin-top: 0;
+    }
+
+    .footer-column > h3 {
+        font-size: 1.1rem;
+        padding-left: 3%;
+    }
+
+    .service-links {
+        padding-left: 5%;
+    }
+  
+    .phone > img,
+    .email > img,
+    .location > img {
+        height: 25px;
+        width: 25px;
+    }
+    
+    .phone,
+    .email,
+    .location {
+        padding-left: 3%;
+    }
+
+}
+
+
+
+
+
+      

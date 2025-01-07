@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking - Reconnect Hotel</title>
+    <link rel="stylesheet" href="styles-booking.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Signika:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section id="booking-page">
+        <div class="header">
+            <div class="logo-home">
+                <img src="./assets/logo.png" alt="Reconnect Hotel Logo">
+            </div>
+            <h1>Reconnect Hotel</h1>
+        </div>
+
+        <div class="navigation">
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="javascript:void(0)" id="about-link">About</a></li>
+                    <li><a href="./index.html#gallery">Gallery</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="booking-background">
+            <img src="assets/room-booking.jpg" alt="Beige hotel room">
+        </div>
+
+        <div id="about-popup">
+            <div class="popup-content">
+                <span id="closeBtn">&times;</span>
+                <img src="./assets/hotel-outside.jpg" alt="Hotel from outside" style="width: 300px; height: auto; float: left; margin-right: 20px;">
+                <div class="popup-text">
+                    <h2>About Our Hotel</h2>
+                    <h3>São Marcos da Serra, Portugal</h3>
+                    <p>Welcome to our beautiful hotel located in the heart of Portugals nature. Our hotel offers modern amenities including:
+                        <ul>
+                            <li>Air conditioning</li>
+                            <li>Doctors on call</li>
+                            <li>Fitness Center</li>
+                            <li>High speed internet access</li>
+                            <li>Laundry Services</li>
+                            <li>Lounges</li>
+                            <li>Multilingual staff</li>
+                            <li>Outdoor Natural Swimming Pool</li>
+                            <li>Pets allowed</li>
+                            <li>Restaurant & Bar</li>
+                            <li>Spa Area</li>
+                            <li>Wakeup service</li>
+                            <li>24-hour Room Service</li>
+                        </ul>
+                    </p>
+                </div>    
+            </div>
+        </div>
+    
+        <div class="booking-container" id="booking-container">
+            <form id="booking-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="guest-amount">Guests (1-10)</label>
+                        <input type="number" id="guest-amount" name="guest-amount" placeholder="2" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="room-amount">Rooms</label>
+                        <input type="text" id="room" name="room" placeholder="1" required>
+                    </div>
+                </div>
+
+                <label for="dates">Dates</label>
+                <input type="date" id="dates" name="dates" placeholder="Select Dates" required>
+    
+                <button type="button" id="checkout-btn">Checkout</button>
+            </form>
+        </div>
+    </section>    
+
+    <script src="script-booking.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</body>
+</html>

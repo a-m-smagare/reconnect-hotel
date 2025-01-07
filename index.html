@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reconnect Hotel</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Signika:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section id="home">
+        <div class="home-background">
+            <img src="./assets/home-background.jpg" alt="Riverside with boats.">
+        </div>
+
+        <div class="header">
+            <div class="logo-home">
+                <img src="./assets/logo.png" alt="Reconnect Hotel Logo">
+            </div>
+
+            <div class="navigation">
+                <nav> 
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <div class="book-now">
+                <button onclick="window.location.href='./booking.html'">Book now</button>
+            </div>
+        </div>    
+
+        <h1>Welcome to Reconnect Hotel</h1>
+        <p>Your Self is calling</p>
+        
+        <form id="availability" onsubmit="return validateForm(event)">
+            <div class="form-group">
+                <label for="checkin">Check-in Date:</label>
+                <input type="date" id="checkin" name="checkin" required>
+            </div> 
+
+            <div class="form-group">
+                <label for="checkout">Check-out Date:</label>
+                <input type="date" id="checkout" name="checkout" required>
+            </div>
+
+            <div class="form-group">
+                <label for="guests">Number of Guests:</label>
+                <div class="guest-input">
+                    <input type="number" id="guests" name="guests" value="1" min="1" max="10">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="rooms">Number of Rooms:</label>
+                <div class="rooms-input">
+                    <input type="number" id="rooms" name="rooms" value="1" min="1" max="10">
+                </div>
+            </div>
+
+            <button type="submit">Check availability</button>
+        </form>
+    </section>
+
+    <section id="about">
+        <div class="about-background">
+            <img src="./assets/about-background.jpg" alt="Cloudy landscape with trees on hillside.">
+        </div>
+
+        <div class="about-info">
+            <h1>Welcome to the Wellness Hotel</h1>
+            <h2>Escape to Reconnect</h2>
+            <h3>Come Home to yourself</h3>
+
+            <div class="book-now">
+                <button onclick="window.location.href='./booking.html'">Book Now</button>
+            </div>
+
+            <p id="about-p">
+                A sanctuary surrounded in nature, where tranquility meets luxury.
+                Reconnect Hotel invites you to start the journey of self-discovery and inner healing.
+                Embrace bliss amidst breathtaking landscapes,
+                participate in our holistic therapies and rediscover your inner being.
+                Elevate, rejuvenate and radiate your spirit during
+                this transformative stay at Reconnect Hotel.
+            </p>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <h1>Your Getaway is calling</h1>
+        <h2>Rooms</h2>
+
+            <div class="images">
+                <div class="image">
+                    <img src="assets/gallery-bedroom.jpg" alt="Bedroom.">
+                    <div class="description">
+                        <p>Step into our serene bedroom, where nature-inspired earthy tones and handcrafted clay textures create a warm and 
+                        inviting atmosphere. Relax in the plush bedding surrounded by the calming beauty of nature, offering the perfect 
+                        sanctuary for restful nights and peaceful mornings.</p>
+                    </div>
+                    <p class="label">Bedroom</p>
+                </div>
+                <div class="image">
+                    <img src="assets/gallery-relaxation.jpg" alt="Living Room.">
+                    <div class="description">
+                        <p>Experience ultimate relaxation in our living room, designed with expansive, earthy tones and a touch of holistic 
+                        comfort. The gentle curvature of the clay walls invites tranquility, while the cozy seating area provides a 
+                        peaceful retreat for reflection or simply unwinding after a day immersed in nature.</p>
+                    </div>
+                    <p class="label">Relaxation</p>
+                </div>
+                <div class="image">
+                    <img src="assets/gallery-bathroom.jpg" alt="Bathroom.">
+                    <div class="description">
+                        <p>Indulge in luxury with our spacious bathroom featuring a large window that frames stunning views of the natural
+                        surroundings. Bathe in the sunlight or unwind in the deep soaking tub, surrounded by smooth clay walls that enhance 
+                        the serene, spa-like experience—perfect for rejuvenating both body and mind.</p>
+                    </div>
+                    <p class="label">Bathroom</p>
+                </div>
+                <div class="image">
+                    <img src="assets/gallery-workspace.jpg" alt="Work Space.">
+                    <div class="description">
+                        <p>Find your focus in our calming workspace, where earthy tones and natural textures inspire creativity and clarity. 
+                        The clay arched walls provide a sense of connection to the earth, while the peaceful environment fosters productivity 
+                        and mindfulness, making it the ideal place for work or creative reflection.</p>
+                    </div>
+                    <p class="label">Workspace</p>
+                </div>
+            </div>
+    </section>
+
+    <section id="contact">
+        <div class="logo-contact">
+            <img src="./assets/logo.png" alt="Reconnect Hotel Logo">
+        </div>
+
+        <div class="contact-background">
+            <img src="assets/contact-background.jpg" alt="Landscape with cypress trees.">
+        </div>
+
+        <div class="contact-page">
+            <h1>Contact us!</h1>
+            <p>We are here to help! Our dedicated team is commited to ensuring your experience
+                with us is seamless and unforgettable.
+                Please do not hesitate to reach out to us. We look forward to connecting with you!
+            </p>
+
+            <form id="contact-form">
+                <div class="name-fields">
+                    <div class="field">
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" name="first_name" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" name="last_name" required>
+                    </div>
+                </div>
+
+                <label for="Email">Email</label>
+                <input type="email" id="Email" name="email" required>
+
+                <label for="Message">Write a message</label>
+                <textarea id="Message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+        </div>    
+    </section>
+
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <img src="assets/logo.png" alt="Hotel Logo" class="logo">
+                <div class="hotel-name-description">
+                    <h2 class="hotel-name">Reconnect Hotel</h2>
+                    <p class="hotel-description">The bestest thing you can do for your soul.</p>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Services</h3>
+                <ul class="service-links">
+                    <li><a href="./booking.html">Booking</a></li>
+                    <li><a href="#">Room Customization</a></li>
+                    <li><a href="#">Special Offers</a></li>
+                    <li><a href="#">Transportation Services</a></li>
+                    <li><a href="#">Customer Support</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <div class="contact-info">
+                    <div class="phone">
+                        <img src="./assets/call-icon.svg" alt="Phone" class="icon"> <!-- Replace with actual phone icon -->
+                        <span><strong>Phone:</strong> +1 (234) 567-890</span>
+                    </div>
+                    <div class="email">
+                        <img src="./assets/mail-icon.svg" alt="Email" class="icon"> <!-- Replace with actual email icon -->
+                        <a href="mailto:info@reconnecthotel.com?subject=%5BPlease%20Read%5D%20Demonstration%20Email%20-%20Do%20Not%20Send&body=This%20is%20a%20demonstration%20email%20address%20and%20is%20not%20a%20real%20contact%20for%20customer%20service%20or%20inquiries.%20Please%20do%20not%20send%20any%20emails%20to%20this%20address%20as%20it%20will%20not%20be%20monitored%20or%20responded%20to.">
+                        <span><strong>Email:</strong> info@reconnecthotel.com</span></a>
+                    </div>
+                    <div class="location">
+                        <img src="./assets/location-icon.svg" alt="Location" class="icon"> <!-- Replace with actual location icon -->
+                        <a href="https://www.google.com/maps/place/8375-257+S%C3%A3o+Marcos+da+Serra,+Portugal/@37.361881,-8.3880116,15z/data=!3m1!4b1!4m6!3m5!1s0xd1ae7408c87b98f:0x6cc734b9b25d16bb!8m2!3d37.3618819!4d-8.3776904!16zL20vMGZqa212?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D"><span><strong>Location: </strong>São Marcos da Serra, Portugal</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
