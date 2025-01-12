@@ -82,7 +82,6 @@ h1 {
     padding-top: 2%;
 }
 
-
 .booking-background {
     width: 100vw;     
     height: 71%;    
@@ -169,6 +168,7 @@ h1 {
     background-color: #ffffff;
 }
 
+/* Pop Up */
 #about-popup {
     display: none;
     position: fixed;
@@ -265,16 +265,223 @@ h1 {
 @keyframes fadeInUp {
     0% {
         opacity: 0;
-        transform: translateY(20px); /* Start slightly below */
+        transform: translateY(20px); 
     }
     100% {
         opacity: 1;
-        transform: translateY(0); /* End at the normal position */
+        transform: translateY(0); 
     }
 }
 
-/* Media Query for Tablets */
-@media (max-width: 1024px) {
+/* Media Query for Mobile Devices */
+@media (max-width: 575px) {
+    .logo-home img {
+        height: 80px;
+        width: auto;
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        text-align: center;
+        margin-top: 0%;
+        padding-top: 0%;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 10px;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .navigation {
+        position: absolute;
+        top: 90%;
+        padding-left: 39%;
+    }
+
+    .navigation ul {
+        gap: 30%; 
+    }
+
+    body {
+        background-image: url('assets/room-booking.jpg'); 
+        background-repeat: no-repeat; 
+        background-size: cover; 
+        background-position: center; 
+        height: 100vh; 
+        width: 100vw; 
+        margin: 0;
+        padding: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        background-blend-mode: darken;
+    }
+
+    .booking-background img { 
+        display: none;
+    }
+
+    .booking-container {
+        width: 55%;
+        left: 23%;
+        top: auto;
+        bottom: 15%;
+    }
+
+    #booking-form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #booking-form .form-row {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    #about-popup {
+        padding: 20px;
+        overflow-y: auto;
+    }
+    
+    .popup-content {
+        flex-direction: column;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    .popup-content > img {
+        display: none;
+    }
+
+    .popup-text {
+        text-align: center;
+        font-size: 0.9rem;
+    }
+
+    .popup-text h2 {
+        font-size: 1.2rem;
+    }
+
+    .popup-text ul {
+        font-size: 0.8rem;
+    }
+
+    #booking-form button {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .logo-home img {
+        height: 80px;
+        width: auto;
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        text-align: center;
+        margin-top: 0%;
+        padding-top: 0%;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 10px;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .navigation {
+        position: absolute;
+        top: 90%;
+        padding-left: 46%;
+    }
+
+    .navigation ul {
+        gap: 30%; 
+    }
+
+    body {
+        background-image: url('assets/room-booking.jpg'); 
+        background-repeat: no-repeat; 
+        background-size: cover; 
+        background-position: center; 
+        height: 100vh; 
+        width: 100vw; 
+        margin: 0;
+        padding: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        background-blend-mode: darken;
+    }
+
+    .booking-background img { 
+        display: none;
+    }
+
+    .booking-container {
+        width: 55%;
+        left: 23%;
+        top: auto;
+        bottom: 13%;
+    }
+
+    #booking-form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #booking-form .form-row {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    #about-popup {
+        padding: 20px;
+        overflow-y: auto;
+    }
+    
+    .popup-content {
+        flex-direction: column;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    .popup-content > img {
+        display: none;
+    }
+
+    .popup-text {
+        text-align: center;
+        font-size: 0.9rem;
+    }
+
+    .popup-text h2 {
+        font-size: 1.2rem;
+    }
+
+    .popup-text ul {
+        font-size: 0.8rem;
+    }
+
+    #booking-form button {
+        font-size: 1rem;
+    }
+
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
     .logo-home img {
         width: 100px;
         height: 100px;
@@ -317,59 +524,75 @@ h1 {
     .popup-content {
         flex-direction: row;
     }
+}
+
+/* Breakpoints */
+@media (min-width: 769px) and (max-width: 980px) {
+    .booking-container {
+        left: 27%;
+        top: 35%;
+    }
+
+    .navigation {
+        left: 35%;
+    }
 
 }
 
-/* Media Query for Mobile Devices */
-@media (max-width: 480px) {
-    /* Logo */
-    .logo-home img {
-        height: auto;
-    }
-
-    /* Heading */
-    h1 {
-        font-size: 1.7rem;
-        padding-top: 0;
-    }
-
-    .header {
-        top: 1%;
-        display: flex;
-        flex-direction: column;
-        left: 25%;
-    }
-
-    /* Nav bar */
+@media (max-width: 765px) {
     .navigation {
-        position: absolute;
-        top: 90%;
-        left: 10%;
+        padding-left: 43%;
+    }
+}
+
+@media (max-width: 525px) {
+    .navigation {
+        padding-left: 36%;
     }
 
-    /* Background image */
-    .booking-background {    
-        height: 71%;    
-    }
-
-    /* Booking form */
     .booking-container {
-        width: 73%;
-        left: 14%;
-        padding: 4% 5% 4%;
+        margin-bottom: 3%;
+    }
+}
+
+@media (max-width: 453px) {
+    .navigation {
+        padding-left: 32%;
+    }
+}
+
+@media (max-width: 453px) {
+    .navigation {
+        padding-left: 28%;
     }
 
-    #about-popup {
-        width: 100vw;
-        height: 100vh;
+    .booking-container {
+        margin-bottom: 8%;
     }
-    
-    .popup-content {
-        flex-direction: column;
-        max-width: 300px;
+}
+
+@media (max-width: 363px) {
+    .navigation {
+        padding-left: 23%;
     }
-    
-    .popup-content > img {
-        display: none;
+
+    .booking-container {
+        margin-bottom: 8%;
+    }
+
+    #booking-form button {
+        margin: 2% 0;
+    }
+}
+
+@media (max-width: 313px) {
+    .navigation {
+        padding-left: 17%;
+    }
+}
+
+@media (max-width: 283px) {
+    .navigation {
+        padding-left: 11%;
     }
 }
