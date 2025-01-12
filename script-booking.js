@@ -1,24 +1,21 @@
-var checkinDate = localStorage.getItem("checkin");
-var checkoutDate = localStorage.getItem("checkout");
-var guestAmount = localStorage.getItem("guests");
-var roomAmount = localStorage.getItem("rooms");
+// Dates from Home section into Booking Section
+const checkinDate = localStorage.getItem("checkin");
+const checkoutDate = localStorage.getItem("checkout");
+const guestAmount = localStorage.getItem("guests");
+const roomAmount = localStorage.getItem("rooms");
 
-var popup = document.getElementById("about-popup");
-var link = document.getElementById("about-link");
-var closeBtn = document.getElementById("closeBtn");
+document.addEventListener("DOMContentLoaded", function () {
 
-document.addEventListener('DOMContentLoaded', function () {
-
-    var fromAvailabilityForm = localStorage.getItem("fromAvailabilityForm"); 
+    const fromAvailabilityForm = localStorage.getItem("fromAvailabilityForm"); 
 
     if (fromAvailabilityForm === "true") {
-        var checkinDate = localStorage.getItem("checkin");
-        var checkoutDate = localStorage.getItem("checkout");
-        var guestAmount = localStorage.getItem("guests");
-        var roomAmount = localStorage.getItem("rooms");
+        let checkinDate = localStorage.getItem("checkin");
+        let checkoutDate = localStorage.getItem("checkout");
+        let guestAmount = localStorage.getItem("guests");
+        let roomAmount = localStorage.getItem("rooms");
 
-        document.getElementById('guest-amount').value = guestAmount; 
-        document.getElementById('room').value = roomAmount;  
+        document.getElementById("guest-amount").value = guestAmount; 
+        document.getElementById("room").value = roomAmount;  
 
         flatpickr("#dates", {
             mode: "range",
@@ -38,6 +35,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+// Make About Section appear/disappear
+const popup = document.getElementById("about-popup");
+const link = document.getElementById("about-link");
+const closeBtn = document.getElementById("closeBtn");
 
 link.addEventListener("click", function() {
     popup.style.display = "flex";
