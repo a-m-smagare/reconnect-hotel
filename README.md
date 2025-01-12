@@ -35,4 +35,4 @@ The webpage was built entirely from scratch. By avoiding frameworks, I aimed to 
 3. Open index.html in browser to view the website locally.
 
 ## Demo
-You can view the live demo here: [Reconnect Hotel]: https://a-m-smagare.github.io/reconnect-hotel/
+You can view the live demo here: https://a-m-smagare.github.io/reconnect-hotel/
